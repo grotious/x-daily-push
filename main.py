@@ -39,13 +39,9 @@ for username, rss_url in RSS_FEEDS.items():
         entry_id = entry.id if hasattr(entry, "id") else entry.link
         if username not in last_seen or entry_id != last_seen[username]:
             # 翻译成中文
-            try:
-                translated = ts.translate_text(entry.title + "\n\n" + entry.description, 
-                                             translator=TRANSLATOR, 
-                                             from_language="en", 
-                                             to_language="zh")
-            except:
-                translated = entry.description  # 翻译失败就用原文
+            # 翻译成中文（临时关闭翻译，先测试能否推送）
+            translated = (entry.title + "\n\n" + entry.description)[:500] + "\n\n（翻译功能已临时关闭，成功后可重新开启）"
+            # 翻译失败就用原文
             
             post_time = entry.published if hasattr(entry, "published") else "未知时间"
             
