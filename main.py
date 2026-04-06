@@ -21,7 +21,7 @@ TRANSLATOR = "baidu"   # 可选: youdao, baidu, google, bing 等 
 
 DATA_FILE = "last_seen.json"
 # ============================================
-FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true
+FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=True
 
 # 加载上次抓取记录
 if os.path.exists(DATA_FILE):
