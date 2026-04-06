@@ -17,7 +17,7 @@ RSS_FEEDS = {
 
 # 翻译引擎（中国用户推荐 youdao 或 baidu，免费额度够用）
 TRANSLATOR = "baidu"   # 可选: youdao, baidu, google, bing 等  
-翻译 = “goo” # 可选： youdao， baidu， google， bing 等
+翻译 = "goo"  # 可选： youdao， baidu， google， bing 等
 
 DATA_FILE = "last_seen.json"
 # ============================================
